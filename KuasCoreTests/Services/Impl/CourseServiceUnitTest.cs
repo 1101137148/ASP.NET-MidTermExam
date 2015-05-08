@@ -46,8 +46,8 @@ namespace KuasCoreTests.Services
             Assert.AreEqual(course.CourseID, dbCourse.CourseID);
 
             Console.WriteLine("課程編號為 = " + dbCourse.CourseID);
-            Console.WriteLine("描述 = " + dbCourse.CourseName);
-            Console.WriteLine("課程年齡為 = " + dbCourse.CourseDescription);
+            Console.WriteLine("課程名稱 = " + dbCourse.CourseName);
+            Console.WriteLine("課程描述為 = " + dbCourse.CourseDescription);
 
             CourseService.DeleteCourse(dbCourse);
             dbCourse = CourseService.GetCourseById(course.CourseID);
@@ -117,8 +117,8 @@ namespace KuasCoreTests.Services
             Assert.IsNotNull(course);
 
             Console.WriteLine("課程編號為 = " + course.CourseID);
-            Console.WriteLine("描述 = " + course.CourseName);
-            Console.WriteLine("課程年齡為 = " + course.CourseDescription);
+            Console.WriteLine("課程名稱 = " + course.CourseName);
+            Console.WriteLine("課程描述為 = " + course.CourseDescription);
         }
 
     }
