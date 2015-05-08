@@ -74,7 +74,7 @@ namespace KuasCore.Dao.Impl
             return null;
         }
 
-        public IList<Course> GetCourseByName(string name)
+        public Course GetCourseByName(string name)
         {
             string command = @"SELECT * FROM Course WHERE CourseName = @CourseName";
 
@@ -84,7 +84,7 @@ namespace KuasCore.Dao.Impl
             IList<Course> courses = ExecuteQueryWithRowMapper(command, parameters);
             if (courses.Count > 0)
             {
-                return courses;
+                return courses[0];
             }
 
             return null;
